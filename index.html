@@ -4,62 +4,121 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Online Banking Management System</title>
+  <title>OBMS | Online Banking</title>
   <style>
     * { box-sizing: border-box; }
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background: linear-gradient(135deg, #071a35, #1265a8);
-      color: white;
-      min-height: 100vh;
-      display: grid;
-      place-items: center;
-      padding: 20px;
+      color: #fff;
+      background: #07152f;
     }
-    .card {
-      max-width: 650px;
-      width: 100%;
-      padding: 40px 25px;
-      border: 1px solid #ffffff40;
-      border-radius: 20px;
-      background: #ffffff12;
+    header {
+      padding: 22px 8%;
+      background: #0b2147;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+    header h2 { margin: 0; }
+    header a { color: #fff; text-decoration: none; }
+    .hero {
       text-align: center;
+      padding: 85px 20px;
+      background: linear-gradient(135deg, #0b2147, #1265bb);
     }
-    h1 { font-size: 32px; }
-    p { line-height: 1.7; color: #e0edff; }
-    .features {
-      text-align: left;
+    .hero h1 { font-size: clamp(32px, 5vw, 52px); margin: 0 0 18px; }
+    .hero p { line-height: 1.8; color: #dceaff; }
+    .btn {
       display: inline-block;
-      line-height: 2;
-    }
-    .button {
-      display: inline-block;
-      padding: 13px 22px;
-      margin-top: 20px;
+      margin: 18px 8px;
+      padding: 13px 23px;
+      background: #fff;
+      color: #0b3972;
       border-radius: 8px;
-      background: #ffffff;
-      color: #073b70;
       text-decoration: none;
       font-weight: bold;
+    }
+    .features {
+      padding: 45px 8%;
+      text-align: center;
+    }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+      gap: 18px;
+      margin-top: 28px;
+    }
+    .card {
+      padding: 25px 18px;
+      background: #11294b;
+      border: 1px solid #28476e;
+      border-radius: 14px;
+    }
+    .card span { font-size: 35px; }
+    footer {
+      padding: 22px;
+      text-align: center;
+      color: #bdcce0;
+      background: #061127;
     }
   </style>
 </head>
 <body>
-  <main class="card">
-    <h1>🏦 Online Banking Management System</h1>
-    <p>Manage banking operations with our Java, JDBC and MySQL academic project.</p>
-    <ul class="features">
-      <li>Customer Account Management</li>
-      <li>Deposit and Withdraw Money</li>
-      <li>Fund Transfer</li>
-      <li>Transaction History</li>
-    </ul>
-    <p>This is an academic demonstration website.</p>
-    <a class="button"
-       href="https://github.com/Poochi005/Online_Banking_Management_System">
-       View Source Code
+  <header>
+    <h2>🏦 OBMS</h2>
+    <a href="https://github.com/Poochi005/Online_Banking_Management_System">
+      View Source Code ↗
     </a>
-  </main>
+  </header>
+
+  <section class="hero">
+    <h1>Online Banking Management System</h1>
+    <p>Simple. Secure-minded. Convenient banking management.</p>
+    <p>Manage accounts, deposits, withdrawals and transfers in one place.</p>
+    <a class="btn" href="#features">Explore Features</a>
+    <a class="btn"
+       href="https://github.com/Poochi005/Online_Banking_Management_System">
+       Project Details
+    </a>
+  </section>
+
+  <section class="features" id="features">
+    <h2>Our Banking Features</h2>
+    <div class="cards">
+      <div class="card">
+        <span>👤</span>
+        <h3>Account Management</h3>
+        <p>Create and view customer accounts.</p>
+      </div>
+      <div class="card">
+        <span>💰</span>
+        <h3>Deposit Money</h3>
+        <p>Record deposits into accounts.</p>
+      </div>
+      <div class="card">
+        <span>💳</span>
+        <h3>Withdraw Money</h3>
+        <p>Validate balances before withdrawals.</p>
+      </div>
+      <div class="card">
+        <span>🔄</span>
+        <h3>Fund Transfer</h3>
+        <p>Transfer funds between accounts.</p>
+      </div>
+      <div class="card">
+        <span>📄</span>
+        <h3>Transaction History</h3>
+        <p>Review recorded transactions.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>Online Banking Management System | Academic Project</p>
+    <p>Demo website only. No real banking transactions are supported.</p>
+  </footer>
 </body>
 </html>
